@@ -1,24 +1,25 @@
-# SSH Log Analysis and Intrusion Detection
+# Security Log Analysis and Threat Detection
 
 ## Overview
 
-SSH Log Analysis and Intrusion Detection is a Python-based cybersecurity tool designed to automate the detection of suspicious SSH activities from Linux authentication logs.
+Security Log Analysis and Threat Detection is a Python-based security monitoring tool designed to analyze Linux authentication logs and identify suspicious activities that may indicate unauthorized access attempts or malicious behavior.
 
-The application analyzes authentication logs, identifies potential intrusion attempts, extracts attack indicators such as source IP addresses and timestamps, classifies attack types, and generates a structured CSV report for further investigation.
+The tool automates the process of parsing authentication logs, extracting attack indicators, classifying security events, and generating structured reports to support threat detection and security investigations.
 
-A graphical user interface built with Tkinter provides an easy and user-friendly method to perform log analysis.
+A graphical user interface (GUI) built using Tkinter provides a simple workflow for selecting log files, performing analysis, and exporting results.
 
 ---
 
 ## Features
 
-- SSH Authentication Log Analysis
-- Detection of Failed Login Attempts
-- Invalid User Enumeration Detection
-- Intrusion Classification
+- Automated Linux Authentication Log Analysis
+- Detection of Failed Authentication Attempts
+- Detection of Invalid User Enumeration Attempts
+- Identification of Suspicious Login Activities
 - IPv4 and IPv6 Address Extraction
+- Event Classification and Categorization
 - CSV Report Generation
-- Graphical User Interface
+- Graphical User Interface (GUI)
 - Simulated Scanning Workflow
 
 ---
@@ -34,26 +35,37 @@ A graphical user interface built with Tkinter provides an easy and user-friendly
 
 ---
 
-## Attack Patterns Detected
+## Security Events Detected
 
-| Pattern | Detection |
-|----------|-----------|
+| Log Pattern | Event Classification |
+|------------|---------------------|
 | Failed Password | Authentication Failure |
-| Invalid User | User Enumeration |
-| Connection Closed | Suspicious Activity |
+| Invalid User | User Enumeration Attempt |
 | Accepted Password | Successful Login Monitoring |
-| No SSH Identification | Scanner/Bot Detection |
+| Connection Closed | Suspicious Connection Activity |
+| Disconnected From | SSH Session Disconnection |
+| No Identification Received | Scanner / Bot Activity |
 
 ---
 
 ## Project Workflow
 
-1. User selects the folder containing the authentication log.
-2. The application scans the log file.
-3. Suspicious SSH activities are detected.
-4. IP addresses and timestamps are extracted.
-5. Attack types are classified.
-6. A CSV report is generated.
+1. User selects a folder containing the authentication log file.
+2. The application scans and parses log entries.
+3. Security events are identified based on predefined attack patterns.
+4. Relevant indicators such as timestamps, IP addresses, and event types are extracted.
+5. Events are classified and organized into a structured format.
+6. A CSV report is generated for further analysis and investigation.
+
+---
+
+## Sample Detection Output
+
+| Timestamp | IP Address | Event Type |
+|------------|------------|------------|
+| Apr 30 00:15:32 | 192.168.1.15 | Authentication Failure |
+| Apr 30 00:16:11 | 192.168.1.15 | Invalid Username Attempt |
+| Apr 30 00:17:12 | ::1 | Successful Login |
 
 ---
 
@@ -61,15 +73,15 @@ A graphical user interface built with Tkinter provides an easy and user-friendly
 
 ### Main Interface
 
-Add screenshot here
+<img src="screenshots/main_window.jpeg" width="700">
 
-### Scanning Process
+### Log Scanning Process
 
-Add screenshot here
+<img src="screenshots/scanning_screen.jpeg" width="700">
 
 ### Report Generation
 
-Add screenshot here
+<img src="screenshots/report_generation.jpeg" width="700">
 
 ---
 
@@ -77,10 +89,24 @@ Add screenshot here
 
 - Real-Time Log Monitoring
 - Email Alert Notifications
-- GeoIP Lookup
-- Automated Threat Scoring
-- CVE Correlation using NIST NVD API
-- SIEM Integration
+- GeoIP-Based IP Enrichment
+- Threat Scoring System
+- MITRE ATT&CK Technique Mapping
+- Dashboard Visualization
+- Automated Alerting Mechanisms
+
+---
+
+## Learning Outcomes
+
+Through this project, the following concepts were explored:
+
+- Linux Authentication Logging
+- Security Event Monitoring
+- Log Parsing and Pattern Matching
+- Threat Detection Fundamentals
+- Security Reporting Automation
+- Python-Based Security Tool Development
 
 ---
 
@@ -88,4 +114,4 @@ Add screenshot here
 
 Shreyas Madhukar
 
-Cybersecurity Enthusiast | Linux Security | Threat Detection
+Cybersecurity | Linux Security | Threat Detection | Offensive Security
