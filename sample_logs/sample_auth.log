@@ -1,0 +1,5 @@
+Apr 30 00:15:32 kali sshd[1203]: Failed password for root from 192.168.1.15 port 51522 ssh2
+Apr 30 00:16:11 kali sshd[1205]: Invalid user admin from 192.168.1.15 port 51524
+Apr 30 00:16:35 kali sshd[1207]: Failed password for user from 192.168.1.15 port 51530 ssh2
+Apr 30 00:17:12 kali sshd[1210]: Accepted password for kali from ::1 port 55322 ssh2
+Apr 30 00:18:45 kali sshd[1214]: Connection closed by 192.168.1.15 port 51540
